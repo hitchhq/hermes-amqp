@@ -1,0 +1,26 @@
+{
+  "name": "hermesjs-amqp",
+  "version": "0.0.1",
+  "description": "AMQP adapter for HermesJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": "https://github.com/hitchhq/hermes-amqp.git",
+  "bugs": "https://github.com/hitchhq/hermes-amqp/issues",
+  "keywords": [
+    "amqp",
+    "hermes",
+    "hermesjs"
+  ],
+  "author": "Francisco Mendez Vilas (fmvilas@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@hitch/mq": "0.0.4",
+    "hermesjs-message": "~2.0.0"
+  },
+  "devDependencies": {
+    "should": "^9.0.2",
+    "sinon": "^1.17.4"
+  }
+}
