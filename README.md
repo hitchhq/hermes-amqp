@@ -21,6 +21,7 @@ const amqp = amqp_broker({
   username: 'YOUR BROKER USERNAME HERE...',
   password: 'YOUR BROKER PASSWORD HERE...',
   topic: 'hello.#',
+  subscribe: false, // OPTIONAL
   queue_options: { exclusive: true }, // OPTIONAL
   consumer_options: { noAck: true }, // OPTIONAL
   host: 'localhost', // OPTIONAL
