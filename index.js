@@ -27,6 +27,7 @@ HermesAMQP.prototype.setup = function setup () {
   this.mq = new TopicMQ({
     exchange: this.settings.exchange,
     queue_options: this.settings.queue_options || { exclusive: true },
+    subscribe: this.settings.subscribe,
     consumer_options: this.settings.consumer_options || { noAck: true },
     topic: this.settings.topic,
     username: this.settings.username,
