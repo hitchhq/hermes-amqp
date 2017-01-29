@@ -1,6 +1,6 @@
 {
   "name": "hermesjs-amqp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "AMQP adapter for HermesJS",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "Francisco Mendez Vilas (fmvilas@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "@hitch/mq": "0.1.0",
+    "@hitch/mq": "0.4.0",
     "hermesjs-message": "~2.0.0"
   },
   "devDependencies": {
