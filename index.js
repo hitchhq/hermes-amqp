@@ -30,6 +30,7 @@ HermesAMQP.prototype.setup = function setup () {
     subscribe: this.settings.subscribe,
     consumer_options: this.settings.consumer_options || { noAck: true },
     topic: this.settings.topic,
+    queue: this.settings.queue,
     username: this.settings.username,
     password: this.settings.password,
     host: this.settings.host || 'localhost',
