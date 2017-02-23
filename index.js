@@ -24,18 +24,9 @@ HermesAMQP.prototype.connect = function connect () {
 };
 
 HermesAMQP.prototype.setup = function setup () {
-  this.mq = new TopicMQ({
-    exchange: this.settings.exchange,
-    queue_options: this.settings.queue_options || { exclusive: true },
-    subscribe: this.settings.subscribe,
-    consumer_options: this.settings.consumer_options || { noAck: true },
-    topic: this.settings.topic,
-    queue: this.settings.queue,
-    username: this.settings.username,
-    password: this.settings.password,
-    host: this.settings.host || 'localhost',
-    port: this.settings.port || 5672
-  });
+  this.settings.host = this.settings.host || 'localhost';
+  this.settings.port = this.settings.port || 5672;
+  this.mq = new TopicMQ(this.settings);
 
   this.mq.on('error', err => console.error(err));
   this.mq.on('connect', (connection) => {
@@ -43,7 +34,7 @@ HermesAMQP.prototype.setup = function setup () {
     this.hermes.emit('broker:ready', { name: 'AMQP adapter' });
   });
 
-  this.mq.on('consume', this.published.bind(this));
+  this.mq.on('message', this.published.bind(this));
 };
 
 HermesAMQP.prototype.published = function published (message) {
