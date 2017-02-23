@@ -1,6 +1,6 @@
 {
   "name": "hermesjs-amqp",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "AMQP adapter for HermesJS",
   "main": "index.js",
   "scripts": {
