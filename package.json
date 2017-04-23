@@ -16,7 +16,7 @@
   "author": "Francisco Mendez Vilas (fmvilas@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "@hitch/mq": "0.4.0",
+    "@hitch/mq": "0.6.0",
     "hermesjs-message": "~2.0.0"
   },
   "devDependencies": {
